@@ -3,112 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Hub - Asga</title>
+  <title>Info Lab Komputer - Asga</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    
     @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-12px) rotate(1deg); }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
     }
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.1); }
-    }
-
-    .animate-float { animation: floatSlow 6s ease-in-out infinite; }
-    .animate-glow-1 { animation: pulseGlow 4s ease-in-out infinite; }
-    .animate-glow-2 { animation: pulseGlow 5s ease-in-out infinite 1s; }
+    .animate-float { animation: floatSlow 4s ease-in-out infinite; }
   </style>
 </head>
-<body class="min-h-screen w-full bg-slate-950 text-slate-100 flex flex-col items-center justify-center p-4 sm:p-6 relative overflow-hidden selection:bg-cyan-500 selection:text-white">
+<body class="min-h-screen w-full bg-gradient-to-br from-sky-200 via-amber-50 to-blue-200 flex items-center justify-center p-4 m-0 overflow-x-hidden">
 
-  <!-- BACKGROUND ANIME SKY GRADIENT & ORBS -->
-  <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-slate-900 to-cyan-950 pointer-events-none"></div>
-  <div class="absolute w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-cyan-500/20 rounded-full blur-[120px] -top-20 -left-20 pointer-events-none animate-glow-1"></div>
-  <div class="absolute w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-indigo-500/20 rounded-full blur-[120px] -bottom-20 -right-20 pointer-events-none animate-glow-2"></div>
-
-  <!-- PARTICLES EFFECT -->
-  <div class="absolute inset-0 pointer-events-none opacity-30 overflow-hidden">
-    <div class="absolute top-1/4 left-1/5 w-1.5 h-1.5 bg-cyan-300 rounded-full blur-[1px] animate-pulse"></div>
-    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-indigo-300 rounded-full blur-[1px] animate-ping" style="animation-duration: 3s;"></div>
-    <div class="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-purple-300 rounded-full blur-[1px] animate-pulse" style="animation-duration: 4s;"></div>
-  </div>
-
-  <!-- MAIN PROFESSIONAL CARD -->
-  <article class="relative w-full max-w-lg bg-slate-900/70 backdrop-blur-2xl border border-slate-700/60 rounded-[32px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-float transition-all duration-300">
+  <!-- KARTU UTAMA (DIJAMIN KETENGAH DENGAN FLEXBOX BODY) -->
+  <main class="relative w-full max-w-xl bg-[#FFFDF5]/95 backdrop-blur-md border-[3px] border-[#FDE68A] rounded-[36px] p-8 shadow-2xl shadow-amber-900/10 animate-float my-auto">
     
-    <!-- TOP ICON (SVG CODE MENGGANTIKAN EMOJI) -->
-    <div class="absolute -top-10 left-1/2 -translate-x-1/2">
-      <div class="w-20 h-20 sm:w-22 sm:h-22 p-1.5 bg-slate-900/90 backdrop-blur-md rounded-full border border-slate-700 shadow-xl flex items-center justify-center">
-        <div class="w-full h-full bg-gradient-to-tr from-cyan-500 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-inner relative overflow-hidden group">
-          <svg class="w-8 h-8 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+    <!-- TOP BADGE (ICON KOMPUTER) -->
+    <div class="absolute -top-11 left-1/2 -translate-x-1/2">
+      <div class="w-22 h-22 p-2 bg-[#FFFDF5] rounded-full border-[3px] border-[#FDE68A] shadow-lg flex items-center justify-center">
+        <div class="w-16 h-16 bg-amber-400 rounded-full flex items-center justify-center text-slate-900 shadow-inner">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
           </svg>
         </div>
       </div>
     </div>
 
-    <!-- HEADER SECTION -->
+    <!-- ORNAMEN TITIK KANAN ATAS -->
+    <div class="absolute top-6 right-6 grid grid-cols-3 gap-1 opacity-40">
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+    </div>
+
+    <!-- HEADER TITLE -->
     <div class="text-center mt-6 mb-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
-        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>Asga Portfolio & Dashboard</span>
-      </div>
-      <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-        Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Workspace</span>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 flex items-center justify-center gap-2">
+        Info Lab <span class="text-amber-500">Komputer</span>
       </h1>
-    </div>
-
-    <!-- CONTENT DISPLAY BOX -->
-    <div class="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-5 mb-6 space-y-4 hover:border-cyan-500/30 transition-colors">
-      <div class="flex items-start gap-4">
-        <div class="p-3 bg-cyan-500/10 rounded-xl text-cyan-400 shrink-0 border border-cyan-500/20">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        </div>
-        <div>
-          <h2 class="text-sm font-bold text-slate-200 mb-1">Status & Fokus Utama</h2>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Mengembangkan sistem antarmuka web modern dengan standar industri tinggi, performa optimal, dan pengalaman visual yang elegan.
-          </p>
-        </div>
+      <div class="flex items-center justify-center gap-2 mt-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600/90">PENGUMUMAN PENTING</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
       </div>
     </div>
 
-    <!-- ACTION BUTTONS (SVG GANTI EMOJI) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-      <a href="#proyek" class="flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold rounded-xl text-xs sm:text-sm shadow-lg shadow-cyan-500/20 transition-all transform hover:-translate-y-0.5">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-        <span>Lihat Proyek</span>
-      </a>
-      <a href="#kontak" class="flex items-center justify-center gap-2 py-3 px-4 bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-bold rounded-xl text-xs sm:text-sm border border-slate-700 transition-all transform hover:-translate-y-0.5">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-        <span>Hubungi Saya</span>
-      </a>
+    <!-- CONTENT BOX -->
+    <div class="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-6 mb-6 flex items-start gap-4 shadow-sm">
+      <div class="p-3.5 bg-amber-400/20 rounded-2xl text-amber-600 shrink-0 border border-amber-300/50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+      </div>
+      <p class="text-slate-700 text-sm leading-relaxed">
+        Siswa kelas <strong class="text-slate-900 font-bold">XI RPL</strong> wajib <strong class="text-amber-600 font-bold underline decoration-wavy decoration-amber-400">mematikan komputer</strong> dan <strong class="text-amber-600 font-bold underline decoration-wavy decoration-amber-400">merapikan kursi</strong> masing-masing sebelum meninggalkan ruangan praktik komputer.
+      </p>
     </div>
 
-    <!-- FOOTER METRICS / INFO -->
-    <div class="flex items-center justify-between border-t border-slate-800 pt-4 text-xs text-slate-400">
-      <div class="flex items-center gap-2">
-        <div class="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300 font-bold text-xs">
+    <!-- GARIS PUTUS-PUTUS -->
+    <div class="border-b border-dashed border-amber-200 mb-5"></div>
+
+    <!-- FOOTER AUTHOR SECTION -->
+    <div class="flex items-center justify-between pt-1">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-400 to-orange-500 p-0.5 shadow-md flex items-center justify-center text-white font-black text-sm">
           A
         </div>
-        <span class="font-medium text-slate-300">Asga Sagara&bull; XII RPL</span>
+        <div>
+          <span class="font-extrabold text-slate-900 block text-sm">Asga XII – RPL</span>
+          <span class="text-slate-500 text-xs">Terima kasih atas kerja sama dan kedisiplinannya.</span>
+        </div>
       </div>
-      <span class="text-emerald-400 font-medium flex items-center gap-1.5">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-        Ready to Build
-      </span>
+      
+      <div class="p-2.5 bg-amber-100/80 rounded-xl text-amber-600 border border-amber-200/80 shadow-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+      </div>
     </div>
 
-  </article>
+    <!-- BOTTOM BADGE BINTANG (MENYATU RAPI DI DALAM KARTU) -->
+    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#FFFDF5] border-2 border-[#FDE68A] px-5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 text-amber-400 text-xs font-bold">
+      <span>★</span><span>★</span><span>★</span>
+    </div>
 
-  <!-- SUB FOOTER -->
-  <footer class="mt-8 text-center text-xs text-slate-500 tracking-wider">
-    Expert Frontend Architecture &bull; Clean Code & Responsive Design
-  </footer>
+  </main>
 
 </body>
 </html>
